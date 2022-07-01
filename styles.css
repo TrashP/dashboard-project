@@ -3,6 +3,8 @@ body {
     display: grid;
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr 6fr;
+    height: 100vh;
+    width: 100vw;
 }
 
 /* header section */
@@ -12,9 +14,43 @@ header {
     grid-row: 1 / 2;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
     justify-content: center;
     align-items: center;
+}
+
+.searchBar, .accounts, .user, .userButtons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    margin-left: 20px;
+}
+
+.searchBar input {
+    width: 300px;
+    height: 25px;
+    border-radius: 5px;
+    background-color: lightgray;
+    border-width: 0;
+}
+
+.user img {
+    width: 50px;
+    height: 50px;
+}
+
+.user h4 {
+    font-size: 20px;
+}
+
+.userButtons button {
+    background-color: rgb(84, 154, 196);
+    color: white;
+    width: 100px;
+    border-radius: 10px;
+    border-width: 0;
+    height: 30px;
 }
 
 /* sidebar section */
@@ -56,7 +92,7 @@ main {
 }
 
 .projects {
-
+    margin-left: 20px;
 }
 
 main p {
@@ -71,26 +107,44 @@ main p {
     grid-gap: 10px;
 }
 
+.cards {
+    border-left: 3px solid rgb(236, 157, 129);
+    padding: 10px;
+}
+
 .projectIcons {
     display: flex;
     justify-content: end;
+    gap: 10px;
+    margin: 10px;
+    margin-top: 30px;
 }
 
 .widgets {
     grid-column: 2 / 3;
+    margin-right: 20px;
 }
 
 .announcements {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
+    padding: 20px;
 }
 
 .trending {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 3fr;
+    padding: 20px;
+    align-items: center;
+}
+
+.announcements p, .announcements h6, .trending p, .trending h6 {
+    margin: 8px;
 }
 
 .cards, .announcements, .trending {
     background-color: white;
+    border-radius: 5px;
+    border-width: 0;
 }
